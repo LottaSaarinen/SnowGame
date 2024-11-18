@@ -16,7 +16,7 @@ function Reset(props) {
                 <div className="reset reset_box">
                   <h2>Haluatko lopettaa harrastuksesi?😶</h2>
                   <p>Varoitus!
-                     Jatkamalla vaivalla hankkimasi omaisuus poistetaan.</p>
+                     Jatkamalla, vaivalla hankkimasi omaisuus poistetaan.</p>
                   <p>Kirjoita teksti <span>{props.resetvalue}</span> alla olevaan kenttään.</p>
                   <div>
                    <input type="text"

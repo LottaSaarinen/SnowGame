@@ -5,9 +5,7 @@ import manifest from './manifest.json';
 
 export default defineConfig({
   plugins: [react(),
-            VitePWA({ manifest: manifest,
-                      workbox: {
-                        globPatterns: ['**/*.{js,css,html,png,svg}']
-                      } })],
+            VitePWA({ manifest: manifest })],
 })
+
 

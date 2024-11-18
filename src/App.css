@@ -200,7 +200,7 @@ a.active .menu_badge {
 }
 
 .header h1 {
-  font-size: 5em;                    /* pääsivun otsikon koko */
+  font-size: 3.5em;                    /* pääsivun otsikon koko */
 }
 
 .header_sub h1 {
@@ -391,9 +391,9 @@ a.active .menu_badge {
 
 @media (max-width: 30em) {
   .header h1 {
-    font-size: 4em;                              /* pääsivun otsikon koko, kun leveys alle raja-arvon */
+    font-size: 3.5em;                              /* pääsivun otsikon koko, kun leveys alle raja-arvon */
   }
 }
 .header h1 {
-  font-size: 5em;                              /* pääsivun otsikon koko, kun leveys alle raja-arvon */
+  font-size: 3.5em;                              /* pääsivun otsikon koko, kun leveys alle raja-arvon */
 }
