@@ -1,6 +1,6 @@
 {
-    "name": "JouluGame",
-    "short_name": "JouluGame",
+    "name": "talligame",
+    "short_name": "talligame",
     "start_url": "/",
     "scope": "/",
     "display": "standalone",

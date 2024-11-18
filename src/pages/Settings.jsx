@@ -5,18 +5,18 @@ import Reset from '../components/Reset';
 function Settings(props) {
   return (
     <div className="container">   
-      <Header balance={props.stats.balance}>Tilastot</Header>
+      <Header balance={props.stats.balance}>Palkkakuitti</Header>
       <div className="scrollbox">
         <div className="settings">
-          <h2>Palkkakuitti</h2>
+          <h2></h2>
           <div>
           <Stat title="Kolikon kerroin on" value={props.stats.increase} />
-          <Stat title="kasassa on" value={props.stats.balance} />
+          <Stat title="Kasassa on" value={props.stats.balance} />
             
             <Stat title="Ansaitut kolikot yhteensä
             " value={props.stats.collected} />
 
-            <Stat title="työpäivien määrä" value={props.stats.clicks} />
+            <Stat title="Työpäivien määrä" value={props.stats.clicks} />
             <Stat title="Hevosostosten määrä" value={props.stats.upgrades} />
 
           </div>

@@ -1,7 +1,7 @@
 export default [
     { 
       id: "saapas",
-      name: "Tallille tarvitaan aluksi kumisaappaat",
+      name: "Aluksi riittää kumisaappaat",
       qty: 0,
       baseprice: 10,
       price: 10,
@@ -38,7 +38,7 @@ export default [
    
     { 
       id: "heppa",
-      name: "Sekä se ihana oma heppa😍",
+      name: "Ihana oma heppa",
       qty: 0,
       baseprice: 24000,
       price: 24000,
@@ -48,7 +48,7 @@ export default [
      
     { 
       id: "heina",
-      name: "Hepalle special heinät!",
+      name: "Hepalle special herkku heinää!",
       qty: 0,
       multiplier: 5600,
       baseprice: 169000,
@@ -57,7 +57,7 @@ export default [
     }, 
     { 
       id: "kaura",
-      name: "Ja tietenkin rutkasti lisärehuja",
+      name: "Rutkasti lisärehuja",
       qty: 0,
       baseprice: 1200000,
       price: 1200000,
@@ -66,7 +66,7 @@ export default [
     },
     { 
       id: "satula",
-      name: "Heppa tarvitsee uuden satulan",
+      name: "Heppa tarvii paremman satulan",
       qty: 0,
       baseprice: 8400000,
       price: 8400000,
@@ -84,7 +84,7 @@ export default [
     },
     { 
       id: "valmennus",
-      name: "Ulkomailta löytyy parhaat valmentajat",
+      name: "Ulkomailta löytyy kuulemma parhaat valmentajat",
       qty: 0,
       baseprice: 417000000,
       price: 417000000,
@@ -92,26 +92,26 @@ export default [
       image: "valmennus.svg"
     },
     {
-      id: "traileri",
-      name: "Tarvitsee trailerin",
+      id: "kilpailut",
+      name: "Haluaa kilpailla Horse Show'ssa",
       qty: 0,
       baseprice: 2950000000,
       price: 2950000000,
       multiplier: 3200000,
-      image: "traileri.svg"
+      image: "kilpailut.svg"
     },
     {
-      id: "kilpailut",
-      name: "Haluaa kilpailla Horse Show'ssa",
+      id: "traileri",
+      name: "Kuljetuskalusto hevoselle",
       qty: 0,
       baseprice: 20800000000,
       price: 20800000000,
       multiplier: 15600000,
-      image: "kilpailut.svg"
+      image: "traileri.svg"
     },
     {
       id: "uusiheppa",
-      name: "Mitäs, jos ostaisi vähän kalliimman hevosen?",
+      name: "Se vähän 'kalliimpi' hevonen?",
       qty: 0,
       baseprice: 147000000000,
       price: 147000000000,
@@ -119,12 +119,12 @@ export default [
       image: "uusiheppa.svg"
     },
     {
-      id: "kuormaauto",
-      name: "Asuntorekka hevosille on hyvä löytyä jokaiselta hevosharrastajalta",
+      id: "tila",
+      name: "Ja lopuksi oma unelmien hevostila",
       qty: 0,
       baseprice: 1040000000000,
       price: 1040000000000,
       multiplier: 371000000,
-      image: "kuormaauto.svg"
+      image: "tila.svg"
     },
   ];

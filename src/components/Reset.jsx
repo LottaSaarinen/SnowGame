@@ -14,9 +14,9 @@ function Reset(props) {
         if (showForm) {
             return (
                 <div className="reset reset_box">
-                  <h2>Eroon hevosista😶</h2>
-                  <p>Varoitus! Haluatko päästä eroon hepoista?
-                     Jatkamalla pääset ehkä eroon hevosharrastuksestasi.</p>
+                  <h2>Haluatko lopettaa harrastuksesi?😶</h2>
+                  <p>Varoitus!
+                     Jatkamalla vaivalla hankkimasi omaisuus poistetaan.</p>
                   <p>Kirjoita teksti <span>{props.resetvalue}</span> alla olevaan kenttään.</p>
                   <div>
                    <input type="text"
