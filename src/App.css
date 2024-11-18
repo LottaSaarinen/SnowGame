@@ -1,10 +1,10 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Boogaloo&family=Roboto+Condensed:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo&family=Roboto+Condensed:wght@400;700&display=swap');
 
 /* -- Värimäärittelyt ------------------------------------------------- */
 
-@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Henny+Penny&family=Mountains+of+Christmas&family=Rubik+Gemstones&family=Rubik+Moonrocks&family=Rubik+Puddles&family=Rubik+Vinyl&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Henny+Penny&family=Mountains+of+Christmas&family=Rubik+Gemstones&family=Rubik+Moonrocks&family=Rubik+Puddles&family=Rubik+Vinyl&display=swap');
 
-
+*/
 :root {
   --primary: #1b171a;
   --secondary: #a4737b;
@@ -36,16 +36,14 @@ body {
 
   background-color: var(--neutral);             /* sovelluksen taustaväri */
   color: var(--neutral-darker);                   /* sovelluksen tekstiväri */
-  font-family: 'Boogaloo', cursive;    /* sovelluksen fontti */
-  font-size: 1.1em;                            /* sovelluksen tekstin koko */
+  font-family: 'Roboto Condensed', sans-serif;  /* sovelluksen fontti */
+  font-size: 1.25em;                        /* sovelluksen tekstin koko */
 }
 
 h1 {
-  font-family: "Berkshire Swash", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1em; 
-  }
+  font-family: 'Boogaloo', cursive;             /* otsikon fontti */
+  font-weight: normal;                          /* otsikon paksuus */
+}
   
  /* font-family: 'Boogaloo', cursive;   
            /* otsikon fontti */
