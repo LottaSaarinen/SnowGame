@@ -15,17 +15,25 @@ function AppRouter(props) {
           element: <Root items={props.stats.itemstobuy} />,
           errorElement: <ErrorPage />,
           children: [
-            { path: "", element: <Clicker stats={props.stats} handleClick={props.handleClick} /> },
-           // { path: "store", element: <Store stats={props.stats} />},
-           //{ path: "store", element: <Store stats={props.stats} storeitems={props.storeitems} />},
-           { path: "store", element: <Store stats={props.stats}
+
+            { path: "", element: <Clicker
+             stats={props.stats}
+               handleClick={props.handleClick} /> },
+           
+           { path: "store",
+             element: <Store
+              stats={props.stats}
            storeitems={props.storeitems}
            handlePurchase={props.handlePurchase} />},
 
-           { path: "settings", element: <Settings stats={props.stats}
+           { path: "settings",
+             element: <Settings
+              stats={props.stats}
            handleReset={props.handleReset} />},
 
-            { path: "credits", element: <Settings stats={props.stats} />}, 
+            { path: "credits",
+               element: <Settings
+                stats={props.stats} />}, 
           ]
         }
       ]);

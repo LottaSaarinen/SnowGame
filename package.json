@@ -1,5 +1,5 @@
 {
-    "name": "joulugame",
+    "name": "talligame",
     "private": true,
     "version": "0.0.0",
     "type": "module",
@@ -26,7 +26,7 @@
         "eslint-plugin-react-refresh": "^0.4.14",
         "globals": "^15.11.0",
         "vite": "^5.4.10",
-        "vite-plugin-pwa": "^0.21.0",
+        "vite-plugin-pwa": "^0.21.1",
         "workbox-window": "^7.3.0"
     }
 }
