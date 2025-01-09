@@ -6,7 +6,6 @@ import getPurchasableItems from './utils/getPurchasableItems';
 import round from './utils/round';
 import './App.css';
 import useLocalStorage from './utils/useLocalStorage';
-import MusicPlayer from './components/musicPlayer'; // Lisää tämä
 
 const fruits = ['lemon', 'banana']
 
@@ -87,6 +86,7 @@ const [lemonPoints, setLemonPoints] = useLocalStorage('lemon-points', 0);
     // Tallennetaan päivitetty stats-muuttuja.
     setStats(newstats);
   };
+  
 
   const handlePurchase = (id) => {
     // Etsitään tunnistetta vastaavan tuotteen indeksi taulukosta.
@@ -133,7 +133,6 @@ const [lemonPoints, setLemonPoints] = useLocalStorage('lemon-points', 0);
 
   return (
     <div className="App">
-      <MusicPlayer src="/src/assets/audio/musa.mp3" /> {/* Lisää tämä */}
      
       <AppRouter
         stats={stats}
