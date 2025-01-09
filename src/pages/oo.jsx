@@ -1,4 +1,4 @@
-
+/*
 import { useState, useEffect } from 'react';
 import AppRouter from './components/AppRouter';
 import items from './config/items.js';
@@ -25,11 +25,8 @@ function App() {
 
   const [stats, setStats, resetStats] = useLocalStorage('lemon-stats', initialstats);
   const [storeitems, setStoreitems, resetStoreitems] = useLocalStorage('lemon-items', items);
-const [lemonPoints, setLemonPoints] = useLocalStorage('lemon-points', 0); 
-  const [bananaPoints, setBananaPoints] = useLocalStorage('banana-points', 0);
- //const initialMusicPlayerState = { isPlaying: false, currentTrack: '', };
- //const [musicPlayerState, setMusicPlayerState, resetMusicPlayerState] = useLocalStorage('music-player-state')*/
- 
+
+
   const weightedRandomFruit = () => {
     const weightedFruits = [
       'lemon', 'lemon', 'lemon', 'lemon', 'lemon','lemon', 
