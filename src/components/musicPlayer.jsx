@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+/*import React, { useEffect } from 'react';
 import { Howl } from 'howler';
 
 const MusicPlayer = ({ src, isPlaying, currentTrack, onStateChange }) => {
@@ -39,8 +39,8 @@ const MusicPlayer = ({ src, isPlaying, currentTrack, onStateChange }) => {
 };
 
 export default MusicPlayer;
-/* MusicPlayer.js
-import React, { useEffect } from 'react';
+MusicPlayer.js
+*/import React, { useEffect } from 'react';
 import { Howl } from 'howler';
 
 const MusicPlayer = ({ src }) => {
@@ -63,4 +63,4 @@ const MusicPlayer = ({ src }) => {
 };
 
 export default MusicPlayer;
-//      <MusicPlayer src="/src/assets/audio/musa.mp3" /> {/* Lisää tämä */
+//     
