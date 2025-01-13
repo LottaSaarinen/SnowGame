@@ -1,4 +1,4 @@
-import lemon from '../assets/kilpailu.svg'
+import lemon from '../assets/pakkanen.svg'
 
 function Lemon(props) {
   return (

@@ -14,10 +14,9 @@ function Reset(props) {
         if (showForm) {
             return (
                 <div className="reset reset_box">
-                  <h2>Haluatko lopettaa harrastuksesi?😶</h2>
-                  <p>Varoitus!
-                     Jatkamalla, vaivalla hankkimasi omaisuus poistetaan.</p>
-                  <p>Kirjoita teksti <span>{props.resetvalue}</span> alla olevaan kenttään.</p>
+                  <h2>Reset</h2>
+                  <p>Warning! Continuing will reset the data.</p>
+                  <p>Write the text <span>{props.resetvalue}</span> in the field below.</p>
                   <div>
                    <input type="text"
                      value={value}
@@ -25,7 +24,7 @@ function Reset(props) {
         </div>
 
         <button disabled={props.resetvalue==value?false:true}
-                onClick={handleReset}>Poista suoritustiedot</button>
+                onClick={handleReset}>Reset data</button>
 
 
                 </div>
@@ -34,7 +33,7 @@ function Reset(props) {
           } else { 
             return (
               <div className="reset">
-                <button onClick={()=>{setShowForm(true)}}>Poista suoritustiedot</button>
+                <button onClick={()=>{setShowForm(true)}}>Reset data</button>
               </div>
             );
           }

@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "../components/Root";
 import ErrorPage from '../pages/ErrorPage';
 import Clicker from '../pages/Clicker';
-
+import Random from '../pages/Random';
 import Store from '../pages/Store';
 import Settings from '../pages/Settings';
 
@@ -31,8 +31,8 @@ function AppRouter(props) {
               stats={props.stats}
            handleReset={props.handleReset} />},
 
-            { path: "credits",
-               element: <Settings
+            { path: "random",
+               element: <Random
                 stats={props.stats} />}, 
           ]
         }

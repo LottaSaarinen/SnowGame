@@ -1,13 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import AppRouter from './components/AppRouter';
 import items from './config/items.js';
 import getPurchasableItems from './utils/getPurchasableItems';
 import round from './utils/round';
 import './App.css';
 import useLocalStorage from './utils/useLocalStorage';
-import MusicPlayer from './components/musicPlayer';
 
-const fruits = ['lemon', 'banana'];
+const fruits = ['lemon', 'banana', 'apple', 'orange', 'grape', 'pineapple', 'strawberry'];
 
 function App() {
   const initialstats = {
@@ -26,22 +25,19 @@ function App() {
   const [storeitems, setStoreitems, resetStoreitems] = useLocalStorage('lemon-items', items);
   const [lemonPoints, setLemonPoints] = useLocalStorage('lemon-points', 0);
   const [bananaPoints, setBananaPoints] = useLocalStorage('banana-points', 0);
-  
-  // Tallennetaan myös musiikki, joka on valittu
-  const [currentMusic, setCurrentMusic] = useLocalStorage('current-music', '/public/assets/audio/musa.mp3');
+
+  const [clickSound] = useState('/public/sounds/click.mp3');
+  const audioContextRef = useRef(new (window.AudioContext || window.webkitAudioContext)());
 
   const weightedRandomFruit = () => {
     const weightedFruits = [
       'lemon', 'lemon', 'lemon', 'lemon', 'lemon', 'lemon',
       'banana', 'banana', 'banana', 'banana', 'banana',
+      'apple', 'orange', 'grape', 'pineapple', 'strawberry'
     ];
+
     const randomIndex = Math.floor(Math.random() * weightedFruits.length);
     return weightedFruits[randomIndex];
-  };
-
-  const playSound = (soundPath) => {
-    const audio = new Audio(soundPath);
-    audio.play().catch((err) => console.error('Error playing sound:', err));
   };
 
   useEffect(() => {
@@ -80,23 +76,21 @@ function App() {
   const handleClick = () => {
     let newstats = { ...stats };
 
-    // Ääni valitaan hedelmän mukaan
-    if (stats.fruit === 'lemon') {
-      playSound('/sounds/lemon-click.mp3');
-    } else if (stats.fruit === 'banana') {
-      playSound('/sounds/banana-click.mp3');
-    }
-
     // Napautusten ja muiden arvojen päivitys
     newstats.clicks = newstats.clicks + 1;
     newstats.balance = round(newstats.balance + newstats.increase, 1);
     newstats.collected = round(newstats.collected + newstats.increase, 1);
     newstats.itemstobuy = countBuyableItems(storeitems, newstats.balance);
     setStats(newstats);
+
+    // Soitetaan klikkausääni
+  
+    const audio = new Audio(clickSound);
+    audio.play();
   };
 
   const handlePurchase = (id) => {
-    const index = storeitems.findIndex((storeitem) => storeitem.id == id);
+    const index = storeitems.findIndex((storeitem) => storeitem.id === id);
     if (stats.balance >= storeitems[index].price) {
       let newstoreitems = [...storeitems];
       let newstats = { ...stats };
@@ -127,9 +121,17 @@ function App() {
     setStoreitems(items);
   };
 
+  // Lisätään käyttäjän eleen käsittely AudioContextin aloittamiseksi
+  useEffect(() => {
+    document.documentElement.addEventListener("mousedown", function() {
+      if (audioContextRef.current.state !== 'running') {
+        audioContextRef.current.resume();
+      }
+    });
+  }, []);
+
   return (
     <div className="App">
-      <MusicPlayer src={currentMusic} /> {/* Käytetään localStoragea valitun musiikin kanssa */}
       <AppRouter
         stats={stats}
         storeitems={storeitems}
@@ -142,4 +144,8 @@ function App() {
 }
 
 export default App;
+
+
+
+/*<MusicPlayer src={currentMusic} /> {/* Käytetään localStoragea valitun musiikin kanssa */
 

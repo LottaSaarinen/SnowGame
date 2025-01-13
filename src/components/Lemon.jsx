@@ -1,5 +1,5 @@
 
-import lemon from '../assets/lemon-big.svg'
+import lemon from '../assets/tr2.jpg'
 
 function Lemon(props) {
   return (
@@ -10,4 +10,5 @@ function Lemon(props) {
 }
   
 export default Lemon;
+
 

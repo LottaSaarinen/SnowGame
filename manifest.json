@@ -1,6 +1,6 @@
 {
-  "name": "talligame",
-  "short_name": "talligame",
+  "name": "snowgame",
+  "short_name": "snowgame",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

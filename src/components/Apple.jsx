@@ -1,4 +1,4 @@
-import lemon from '../assets/ratsasta.jpg'
+import lemon from '../assets/rikki.jpg'
 
 function Lemon(props) {
   return (

@@ -9,7 +9,7 @@ function Balance(props) {
   
     return (
       <div className="balance">
-        <div>💳</div>
+        <div>☃️</div>
         <div className="balance_total">{total}</div>
       </div>
     );

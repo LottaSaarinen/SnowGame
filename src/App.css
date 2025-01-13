@@ -1,19 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Boogaloo&family=Roboto+Condensed:wght@400;700&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Boogaloo&family=Roboto+Condensed:wght@400;700&display=swap');
 
 /* -- Värimäärittelyt ------------------------------------------------- */
 
 /*@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Henny+Penny&family=Mountains+of+Christmas&family=Rubik+Gemstones&family=Rubik+Moonrocks&family=Rubik+Puddles&family=Rubik+Vinyl&display=swap');
-
 */
+
+@import url('https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&display=swap');
+.codystar-light {
+  font-family: "Codystar", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.codystar-regular {
+  font-family: "Codystar", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 :root {
-  --primary: #1b171a;
-  --secondary: #a4737b;
-  --neutral-lightest: #eacfcf;
-  --neutral-light: #f2d4e3;
-  --neutral: #ddc2d1;
-  --neutral-dark: #c98585;
-  --neutral-darker: #130d0f;
-  --neutral-darkest: #171516;
+  --primary: #856241;
+  --secondary: #a09982;
+  --neutral-lightest: #f4e68c;
+  --neutral-light: #bbb29d;
+  --neutral: #716536;
+  --neutral-dark: #605542;
+  --neutral-darker: #23210a;
+  --neutral-darkest: #060606;
 }
 
 /* -- yhteiset tyylimääritykset --------------------------------------- */
@@ -25,25 +39,18 @@
 }
 
 body {
-  background-image: url('assets/kuva.jpg');/*/xm3m_fwh1_220330.jpg');  /* Määritetään taustakuvan tiedosto */
+  background-image: url('assets/t9.jpg');/*/xm3m_fwh1_220330.jpg');  /* Määritetään taustakuvan tiedosto */
   background-size: cover;                        /* Kuva peittää koko taustan */
   background-position: center;                   /* Taustakuva keskitetään */
   background-repeat: no-repeat;                  /* Estetään taustakuvan toistuminen */
-  height: 100vh;                                 /* Määritetään korkeus 100% näytön korkeudesta */
-  margin: 0;                                     /* Poistetaan mahdolliset marginaalit */
-
-                            /* Poistetaan marginaalit */
-
-  background-color: var(--neutral);             /* sovelluksen taustaväri */
-  color: var(--neutral-darker);                   /* sovelluksen tekstiväri */
-  font-family: 'Roboto Condensed', sans-serif;  /* sovelluksen fontti */
-  font-size: 1.25em;                        /* sovelluksen tekstin koko */
+  max-width: 38rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 115vh;  
 }
 
-h1 {
-  font-family: 'Boogaloo', cursive;             /* otsikon fontti */
-  font-weight: normal;                          /* otsikon paksuus */
-}
+
   
  /* font-family: 'Boogaloo', cursive;   
            /* otsikon fontti */
@@ -83,7 +90,8 @@ h1 {
 /* -- Useamman komponentin yhteiset määritykset ----------------------- */
 
 .container {
-  height: 100%;                        /* käytetään koko käytettävissä oleva korkeus */
+  height: 100%;
+  width: 100%;                        /* käytetään koko käytettävissä oleva korkeus */
   display: flex;                       /* käytetään flexboxia juoksutukseen */
   flex-direction: column;              /* elementin sijoittuvat ylhäältä alas */
 }
@@ -137,11 +145,11 @@ h1 {
 }
 
 .menu a {
-  opacity: 0.5;                        /* kaikki menuikonit ovat läpinäkyvyviä */
+  opacity: 0.6;                        /* kaikki menuikonit ovat läpinäkyvyviä */
 }
 
 .menu img {
-  height: 3.5em;                       /* menuikonien koko */   
+  height: 4em;                       /* menuikonien koko */   
 }
 
 .menu a.active {
@@ -160,7 +168,7 @@ h1 {
   position: absolute;                            /* sijainti absoluuttinen suhteessa ikoniin */
   top: -0.5em;                                   /* yläreunasta hieman alaspäin */
   right: -0.5em;                                 /* oikeasta reunasta hieman vasemmalle */ 
-  height: 2em;                                   /* korkeus */
+  height: 4em;                                   /* korkeus */
   width: 2em;                                    /* leveys */ 
   padding: 0.5em;                                /* täyte */
   border-radius: 50%;                            /* muutetaan ympyräksi */
@@ -179,6 +187,8 @@ a.active .menu_badge {
 
 .clicker {
   justify-content: space-evenly;        /* jaetaan tasaisesti pystysuunnassa */
+                                /* oikeasta reunasta hieman vasemmalle */ 
+  
 }
 
 /* -- Header-komponentti ---------------------------------------------- */
@@ -187,14 +197,12 @@ a.active .menu_badge {
   display: flex;                       /* käytetään flexboxia */
   justify-content: center;             /* keskitetään sisältö */
   align-items: baseline;               /* tekstit alkavat samasta tasosta */
-  color: var(--neutral-darkest);
-      /* tekstin väri */ 
+  color: var(--neutral-darkest);       /* tekstin väri */ 
 }
 
 .header_sub {
   justify-content: space-between;      /* sijoitus kumpaakin reunaan */
-  margin-bottom: 1em;  
-                 /* alareunan marginaali */
+  margin-bottom: 3em;                  /* alareunan marginaali */
 }
 
 .header h1 {
@@ -202,13 +210,13 @@ a.active .menu_badge {
 }
 
 .header_sub h1 {
-  font-size: 3em;                      /* alasivun otsikon koko */
+  font-size: 2em;                      /* alasivun otsikon koko */
 }
 
 .header_sub div {
   display: flex;                       /* käytetään flexboxia */
   align-items: center;                 /* keskitetään pystysuunnassa */
-  font-size: 1.0em;                   /* tekstin koko */
+  font-size: 1.2em;                   /* tekstin koko */
 }
 
 .header_sub img {
@@ -217,49 +225,55 @@ a.active .menu_badge {
 }
 
 /* -- Balance-komponentti --------------------------------------------- */
-.booster{
-  font-weight: bold; 
-  font-size: 1.4em;
-  text-align: left;
-}
+
 .balance {
   font-size: 1.5em;                    /* tekstin koko */ 
-  text-align: right;                   /* asemoidaan oikeaan reunaan */
+  text-align: right; 
+  margin-top: -4.3em;                    /* asemoidaan oikeaan reunaan */
 }
 
 .balance_total {
-  font-size: 1em;                    /* luvun tekstikoko */
+  font-size: 1.2em;                    /* luvun tekstikoko */
   color: var(--primary);               /* luvun värinä tehoste*/
-  margin-top: -0.25em;                 /* viedään lukua lähemmäs selitetekstiä */
+  margin-top: -0.3em;                 /* viedään lukua lähemmäs selitetekstiä */
   font-weight: bold;                   /* teksti lihavoitu */
 }
 
 /* -- Lemon-komponentti ----------------------------------------------- */
 
 .lemon {
-  width: 85%;                          /* kuvan leveys 60% alueen leveydestä */
-  margin: 0 auto;                      /* keskitetään kuva */
+  width: 25%;                          /* kuvan leveys 60% alueen leveydestä */
+  margin: 0 auto; 
+  margin-top: -3.0em;                       /* keskitetään kuva */
 }
 
 .lemon img {
-  width: 100%;                         /* skaalataan kuva täyttämään kuvalle varattu alue */
+  
+    width: 100px; 
+    height: 290px; /* saman kokoinen kuin leveys, jotta kuvasta tulee ympyrä */
+    border-radius: 50%; /* tekee kuvasta ympyrän */
+    object-fit: cover; /* varmistaa, että kuva täyttää ympyrän ilman venymistä */
+  
+ 
+                               /* yläreunasta hieman alaspäin */
+                                            /* skaalataan kuva täyttämään kuvalle varattu alue */
 }
 
 
 
 .lemon img:active {
-  -webkit-animation: beat 0.1s ease-in-out backwards;       /* kuvan animaation */
-          animation: beat 0.1s ease-in-out backwards;       /* kuvan animaation */
+  -webkit-animation: beat 0.11s ease-in-out backwards;       /* kuvan animaation */
+          animation: beat 0.11s ease-in-out backwards;       /* kuvan animaation */
 }
 
 @keyframes beat {                                /* animaatiomääriteykset */
   0% {
-    -webkit-transform: scale(2, 3);              /* lähtötilanteessa kuva täysikokoinen */
-            transform: scale(2, 3);
+    -webkit-transform: scale(1, 1);              /* lähtötilanteessa kuva täysikokoinen */
+            transform: scale(1, 1);
   }
   100% {
-    -webkit-transform: scale(0.8, 0.8);          /* skaalataan kuva animaatiossa pienemmäksi */
-            transform: scale(0.8, 0.8);          /* animaation jälkeen kuva palaa alkuperäiseen kokoon */
+    -webkit-transform: scale(0.10, 0.6);          /* skaalataan kuva animaatiossa pienemmäksi */
+            transform: scale(0.10, 0.9);          /* animaation jälkeen kuva palaa alkuperäiseen kokoon */
   }
 }
 
@@ -267,6 +281,10 @@ a.active .menu_badge {
 
 .booster {
   text-align: center;                  /* teksti asemoidaan keskelle */
+  font-size: 1.5em;
+  top: -3em; 
+  margin-top: -2.8em;                                    /* yläreunasta hieman alaspäin */
+                  
 }
 
 /* -- Item-komponentti ----------------------------------------------- */
@@ -282,11 +300,11 @@ a.active .menu_badge {
 }
 
 .item-disabled {
-  opacity: 0.5;                                  /* osittain läpinäkyvä jos ei valittavissa */
+  opacity: 0.6;                                  /* osittain läpinäkyvä jos ei valittavissa */
 }
 
 .item_icon {
-  width: 4em;                                    /* ikonialueen koko */
+  width: 8em;                                    /* ikonialueen koko */
   text-align: center;                            /* keskitetään ikoni keskelle aluetta */
 }
 
@@ -332,12 +350,12 @@ a.active .menu_badge {
 }
 
 .stat h3 {
-  font-size: 0.8em;                              /* tilastolaatikon otsikon koko */
+  font-size: 1.1em;                              /* tilastolaatikon otsikon koko */
   font-weight: normal;                           /* tilastolaatikon otsikon paksuus */
 }
 
 .stat p {
-  font-size: 1em;                                /* tilastolaatikon tekstin koko */
+  font-size: 1.5em;                                /* tilastolaatikon tekstin koko */
   font-weight: bold;                             /* tilastolaatikon tekstin paksuus */
   color: var(--primary);                         /* tilastolaatikon tekstin väri */
 }
@@ -373,7 +391,7 @@ a.active .menu_badge {
 
 .reset button {                                  
   background-color: var(--secondary);            /* napin taustaväri */
-  color: #e8ebeb;                              /* napin tekstiväri */
+  color: #ebf0f0;                              /* napin tekstiväri */
   padding: 0.75em;                               /* napin täyte */
   border: none;                                  /* napilla ei ole kehysviivaa */
   border-radius: 5px;                            /* napin reunan pyöristys */
@@ -389,9 +407,6 @@ a.active .menu_badge {
 
 @media (max-width: 30em) {
   .header h1 {
-    font-size: 3.5em;                              /* pääsivun otsikon koko, kun leveys alle raja-arvon */
+    font-size: 3em;                              /* pääsivun otsikon koko, kun leveys alle raja-arvon */
   }
-}
-.header h1 {
-  font-size: 3.5em;                              /* pääsivun otsikon koko, kun leveys alle raja-arvon */
 }

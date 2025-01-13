@@ -1,6 +1,7 @@
 import iconLemon from '../assets/lemon.svg';
 import iconPackage from '../assets/package.svg';
 import iconSettings from '../assets/settings.svg';
+import iconPokaali from '../assets/pokaali.svg';
 import { NavLink } from "react-router-dom";
 
 function Menu(props) {
@@ -18,6 +19,9 @@ function Menu(props) {
           </div>
           <div>
             <NavLink to="/settings"><img src={iconSettings} alt="settings" /></NavLink>
+          </div>
+          <div>
+            <NavLink to="/random"><img src={iconPokaali} alt="pokaali" /></NavLink>
           </div>
         </div>
       );
