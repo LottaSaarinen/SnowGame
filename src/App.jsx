@@ -85,15 +85,15 @@ function App() {
     setStats(newstats);
 
     // Soitetaan klikkausääni
-     if (newstats.fruit === 'lemon' || newstats.fruit === 'banana') {
-      const audio = new Audio(clickSound);
-      audio.play();
-    }
+    // if (newstats.fruit === 'lemon' || newstats.fruit === 'banana') {
+     // const audio = new Audio(clickSound);
+     // audio.play();
+    
+     //if (newstats.fruit === 'lemon' || newstats.fruit === 'banana') {
+    const audio = new Audio(clickSound);
+    audio.play();
   };
-    //const audio = new Audio(clickSound);
-    //audio.play();
-  //};
-
+ // }
   const handlePurchase = (id) => {
     const index = storeitems.findIndex((storeitem) => storeitem.id === id);
     if (stats.balance >= storeitems[index].price) {

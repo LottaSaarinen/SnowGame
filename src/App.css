@@ -166,13 +166,13 @@ body {
   background-color: var(--neutral-darkest);      /* taustaväri (ei aktiivinen) */
   color: var(--neutral);                         /* tekstiväri (ei aktiivinen) */
   position: absolute;                            /* sijainti absoluuttinen suhteessa ikoniin */
-  top: -0.5em;                                   /* yläreunasta hieman alaspäin */
+  top: -0.9em;                                   /* yläreunasta hieman alaspäin */
   right: -0.5em;                                 /* oikeasta reunasta hieman vasemmalle */ 
-  height: 4em;                                   /* korkeus */
+  height: 2em;                                   /* korkeus */
   width: 2em;                                    /* leveys */ 
   padding: 0.5em;                                /* täyte */
   border-radius: 50%;                            /* muutetaan ympyräksi */
-  font-size: 0.75em;                             /* tekstin koko */
+  font-size: 0.65em;                             /* tekstin koko */
   line-height: 1em;                              /* tekstirivin korkeus = korkeus - täyte */
   text-align: center;                            /* tekstin keskitys */
   font-weight: bold;                             /* tekstin lihavointi */

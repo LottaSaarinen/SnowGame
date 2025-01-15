@@ -5,23 +5,23 @@ export default [
       qty: 0,
       baseprice: 10,
       price: 10,
-      multiplier: 0,
+      multiplier: 1,
       image: "burger.svg"
     },
     { 
       id: "hiekkaampari",
       name: "Sand bucket",
       qty: 0,
-      baseprice: 35,
+      baseprice: 55,
       price: 35,
-      multiplier: 1,
+      multiplier: 2,
       image: "hiekkaampari.svg"
     },
     { 
       id: "lapio",
       name: "Shovel",
       qty: 0,
-      baseprice: 45,
+      baseprice: 95,
       price: 45,
       multiplier: 2,
       image: "lapio.svg"
