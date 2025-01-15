@@ -5,6 +5,7 @@ import getPurchasableItems from './utils/getPurchasableItems';
 import round from './utils/round';
 import './App.css';
 import useLocalStorage from './utils/useLocalStorage';
+//import soundPlayer from './utils/soundPlayer';
 
 const fruits = ['lemon', 'banana', 'apple', 'orange', 'grape', 'pineapple', 'strawberry'];
 
@@ -26,7 +27,7 @@ function App() {
   const [lemonPoints, setLemonPoints] = useLocalStorage('lemon-points', 0);
   const [bananaPoints, setBananaPoints] = useLocalStorage('banana-points', 0);
 
-  const [clickSound] = useState('/public/sounds/click.mp3');
+  const [clickSound] = useState('/public/sounds/clicker.mp3');
   const audioContextRef = useRef(new (window.AudioContext || window.webkitAudioContext)());
 
   const weightedRandomFruit = () => {
@@ -84,10 +85,14 @@ function App() {
     setStats(newstats);
 
     // Soitetaan klikkausääni
-  
-    const audio = new Audio(clickSound);
-    audio.play();
+     if (newstats.fruit === 'lemon' || newstats.fruit === 'banana') {
+      const audio = new Audio(clickSound);
+      audio.play();
+    }
   };
+    //const audio = new Audio(clickSound);
+    //audio.play();
+  //};
 
   const handlePurchase = (id) => {
     const index = storeitems.findIndex((storeitem) => storeitem.id === id);
@@ -147,5 +152,4 @@ export default App;
 
 
 
-/*<MusicPlayer src={currentMusic} /> {/* Käytetään localStoragea valitun musiikin kanssa */
 

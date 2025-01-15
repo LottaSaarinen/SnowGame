@@ -12,7 +12,7 @@ import Strawberry from '../components/Strawberry';
 function Clicker(props) {
   return (
     <div className="container clicker">
-      <Header>WinterGame</Header>
+      <Header>SnowGame</Header>
       <Balance total={props.stats.balance} />
       {props.stats.fruit === 'lemon' && <Lemon onClick={props.handleClick} />}
       {props.stats.fruit === 'banana' && <Banana onClick={props.handleClick} />}

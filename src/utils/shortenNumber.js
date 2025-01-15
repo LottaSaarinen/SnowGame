@@ -7,13 +7,13 @@ const numberQuadrillion = Math.pow(10,15);
 
 function shortenNumber(number) {
   if (number > numberQuadrillion) {
-    return (number / numberQuadrillion).toFixed(2) + " Hepojoonaa";
+    return (number / numberQuadrillion).toFixed(2) + " Qadrillion";
   } else if (number > numberTrillion) {
-    return (number / numberTrillion).toFixed(2) + " Triljoonaa";
+    return (number / numberTrillion).toFixed(2) + " Trillion";
   } else if (number > numberBillion) {
-    return (number / numberBillion).toFixed(2) + " Biljoonaa";
+    return (number / numberBillion).toFixed(2) + " Billion";
   } else if (number > numberMillion) {
-    return (number / numberMillion).toFixed(2) +" Miljoonaa";
+    return (number / numberMillion).toFixed(2) +" Million";
   } else {
     return number;
   }

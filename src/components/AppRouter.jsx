@@ -31,9 +31,7 @@ function AppRouter(props) {
               stats={props.stats}
            handleReset={props.handleReset} />},
 
-            { path: "random",
-               element: <Random
-                stats={props.stats} />}, 
+           { path: "random", element: <Random /> },
           ]
         }
       ]);
