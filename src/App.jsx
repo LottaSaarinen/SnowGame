@@ -27,7 +27,7 @@ function App() {
   const [lemonPoints, setLemonPoints] = useLocalStorage('lemon-points', 0);
   const [bananaPoints, setBananaPoints] = useLocalStorage('banana-points', 0);
 
-  const [clickSound] = useState('/public/sounds/clicker.mp3');
+  const [clickSound] = useState('/sounds/clicker.mp3');
   const audioContextRef = useRef(new (window.AudioContext || window.webkitAudioContext)());
 
   const weightedRandomFruit = () => {
@@ -89,11 +89,11 @@ function App() {
      // const audio = new Audio(clickSound);
      // audio.play();
     
-     //if (newstats.fruit === 'lemon' || newstats.fruit === 'banana') {
+     if (newstats.fruit === 'lemon' || newstats.fruit === 'banana') {
     const audio = new Audio(clickSound);
     audio.play();
   };
- // }
+  }
   const handlePurchase = (id) => {
     const index = storeitems.findIndex((storeitem) => storeitem.id === id);
     if (stats.balance >= storeitems[index].price) {
