@@ -12,8 +12,8 @@ export default [
       id: "hiekkaampari",
       name: "Sand bucket",
       qty: 0,
-      baseprice: 55,
-      price: 35,
+      baseprice: 65,
+      price: 65,
       multiplier: 2,
       image: "hiekkaampari.svg"
     },
@@ -21,8 +21,8 @@ export default [
       id: "lapio",
       name: "Shovel",
       qty: 0,
-      baseprice: 95,
-      price: 45,
+      baseprice: 395,
+      price: 395,
       multiplier: 2,
       image: "lapio.svg"
     },
@@ -30,9 +30,9 @@ export default [
       id: "hiekotuskarry",
       name: "Sand Cart",
       qty: 0,
-      baseprice: 169,
-      price: 100,
-      multiplier: 5,
+      baseprice: 550,
+      price: 550,
+      multiplier: 11,
       image: "hiekka1.jpg"
     }, 
     { 
@@ -41,7 +41,7 @@ export default [
       qty: 0,
       baseprice: 1200,
       price: 1200,
-      multiplier: 15,
+      multiplier: 35,
       image: "juoma.svg"
     },
     { 
@@ -57,9 +57,9 @@ export default [
       id: "hiekotusmonkija",
       name: "Sand ATV",
       qty: 0,
-      baseprice: 6990,
-      price: 6990,
-      multiplier: 45,
+      baseprice: 9990,
+      price: 9990,
+      multiplier: 75,
       image: "hiekotusmonk.jpg"
     },
     { 
@@ -68,7 +68,7 @@ export default [
       qty: 0,
       baseprice: 14000,
       price: 14000,
-      multiplier: 95,
+      multiplier: 195,
       image: "auto.svg"
     },
    
@@ -78,9 +78,9 @@ export default [
       id: "solifer",
       name: "Solifer",
       qty: 0,
-      multiplier: 686,
       baseprice: 19600,
       price: 16900,
+      multiplier: 686,
       image: "solifer.svg"
     }, 
     { 

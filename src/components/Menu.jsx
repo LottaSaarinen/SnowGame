@@ -1,7 +1,7 @@
 import iconLemon from '../assets/lemon.svg';
 import iconPackage from '../assets/package.svg';
 import iconSettings from '../assets/settings.svg';
-import iconKlovni from '../assets/klovni.svg';
+import iconEmail from '../assets/email.svg';
 import { NavLink } from "react-router-dom";
 
 function Menu(props) {
@@ -21,7 +21,7 @@ function Menu(props) {
             <NavLink to="/settings"><img src={iconSettings} alt="settings" /></NavLink>
           </div>
           <div>
-            <NavLink to="/random"><img src={iconKlovni} alt="klovni" /></NavLink>
+            <NavLink to="/random"><img src={iconEmail} alt="email" /></NavLink>
           </div>
         </div>
       );
