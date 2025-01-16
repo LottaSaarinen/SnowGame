@@ -27,9 +27,10 @@ function App() {
   const [lemonPoints, setLemonPoints] = useLocalStorage('lemon-points', 0);
   const [bananaPoints, setBananaPoints] = useLocalStorage('banana-points', 0);
   
-  // Tallennetaan myös musiikki, joka on valittu
-  const [currentMusic, setCurrentMusic] = useLocalStorage('current-music', '/public/assets/audio/musa.mp3');
+  const [clickSound] = useState('/sounds/harja.mp3');
+  const audioContextRef = useRef(new (window.AudioContext || window.webkitAudioContext)());
 
+  
   const weightedRandomFruit = () => {
     const weightedFruits = [
       'lemon', 'lemon', 'lemon', 'lemon', 'lemon', 'lemon',
@@ -39,10 +40,7 @@ function App() {
     return weightedFruits[randomIndex];
   };
 
-  const playSound = (soundPath) => {
-    const audio = new Audio(soundPath);
-    audio.play().catch((err) => console.error('Error playing sound:', err));
-  };
+ 
 
   useEffect(() => {
     const changeFruit = () => {
@@ -80,20 +78,19 @@ function App() {
   const handleClick = () => {
     let newstats = { ...stats };
 
-    // Ääni valitaan hedelmän mukaan
-    if (stats.fruit === 'lemon') {
-      playSound('/sounds/lemon-click.mp3');
-    } else if (stats.fruit === 'banana') {
-      playSound('/sounds/banana-click.mp3');
-    }
-
-    // Napautusten ja muiden arvojen päivitys
+  //usten ja muiden arvojen päivitys
     newstats.clicks = newstats.clicks + 1;
     newstats.balance = round(newstats.balance + newstats.increase, 1);
     newstats.collected = round(newstats.collected + newstats.increase, 1);
     newstats.itemstobuy = countBuyableItems(storeitems, newstats.balance);
     setStats(newstats);
+  
+
+  if (newstats.fruit === 'lemon') {
+    const audio = new Audio(clickSound);
+    audio.play();
   };
+  }
 
   const handlePurchase = (id) => {
     const index = storeitems.findIndex((storeitem) => storeitem.id == id);
@@ -127,9 +124,17 @@ function App() {
     setStoreitems(items);
   };
 
+  useEffect(() => {
+    document.documentElement.addEventListener("mousedown", function() {
+      if (audioContextRef.current.state !== 'running') {
+        audioContextRef.current.resume();
+      }
+    });
+  }, []);
+
+
   return (
     <div className="App">
-      <MusicPlayer src={currentMusic} /> {/* Käytetään localStoragea valitun musiikin kanssa */}
       <AppRouter
         stats={stats}
         storeitems={storeitems}

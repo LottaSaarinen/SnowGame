@@ -31,7 +31,7 @@ body {
   background-repeat: no-repeat;                  /* Estetään taustakuvan toistuminen */
   height: 100vh;                                 /* Määritetään korkeus 100% näytön korkeudesta */
   margin: 0;                                     /* Poistetaan mahdolliset marginaalit */
-
+  max-width: 45rem;
                             /* Poistetaan marginaalit */
 
   background-color: var(--neutral);             /* sovelluksen taustaväri */
@@ -150,7 +150,7 @@ h1 {
 
 .menu div {
   position: relative;                  /* menuelementin sijainniksi suhteellinen (menu_badge) */
-
+  top: 1.1em;  
 }
 
 .menu_badge {
@@ -158,7 +158,7 @@ h1 {
   background-color: var(--neutral-darkest);      /* taustaväri (ei aktiivinen) */
   color: var(--neutral);                         /* tekstiväri (ei aktiivinen) */
   position: absolute;                            /* sijainti absoluuttinen suhteessa ikoniin */
-  top: -0.5em;                                   /* yläreunasta hieman alaspäin */
+  top: -1.1em;                                   /* yläreunasta hieman alaspäin */
   right: -0.5em;                                 /* oikeasta reunasta hieman vasemmalle */ 
   height: 2em;                                   /* korkeus */
   width: 2em;                                    /* leveys */ 
@@ -219,13 +219,16 @@ a.active .menu_badge {
 /* -- Balance-komponentti --------------------------------------------- */
 .booster{
   font-weight: bold; 
-  font-size: 1.4em;
-  text-align: left;
+  font-size: 1.6em;
+  text-align: center;
+
 }
 .balance {
   font-size: 1.5em;                    /* tekstin koko */ 
-  text-align: right;                   /* asemoidaan oikeaan reunaan */
-}
+  text-align: right; 
+  margin-top: -4.25em;                 /* asemoidaan oikeaan reunaan */
+                    /* asemoidaan oikeaan reunaan */
+  }
 
 .balance_total {
   font-size: 1em;                    /* luvun tekstikoko */
@@ -237,17 +240,40 @@ a.active .menu_badge {
 /* -- Lemon-komponentti ----------------------------------------------- */
 
 .lemon {
-  width: 85%;                          /* kuvan leveys 60% alueen leveydestä */
+  width: 120%;
+                          /* kuvan leveys 60% alueen leveydestä */
   margin: 0 auto;                      /* keskitetään kuva */
 }
 
 .lemon img {
   width: 100%;                         /* skaalataan kuva täyttämään kuvalle varattu alue */
 }
-
-
+.banana {
+  width: 100%;
+  height:0%;                          /* kuvan leveys 60% alueen leveydestä */
+  margin: 0 auto;
+}
+.banana img {
+  width: 60%; 
+  right: 8.5em;
+ }
 
 .lemon img:active {
+  -webkit-animation: beat 0.1s ease-in-out backwards;       /* kuvan animaation */
+          animation: beat 0.1s ease-in-out backwards;       /* kuvan animaation */
+}
+
+@keyframes beat {                                /* animaatiomääriteykset */
+  0% {
+    -webkit-transform: scale(2, 3);              /* lähtötilanteessa kuva täysikokoinen */
+            transform: scale(2, 3);
+  }
+  100% {
+    -webkit-transform: scale(0.8, 0.8);          /* skaalataan kuva animaatiossa pienemmäksi */
+            transform: scale(0.8, 0.8);          /* animaation jälkeen kuva palaa alkuperäiseen kokoon */
+  }
+}
+.banana img:active {
   -webkit-animation: beat 0.1s ease-in-out backwards;       /* kuvan animaation */
           animation: beat 0.1s ease-in-out backwards;       /* kuvan animaation */
 }
@@ -266,7 +292,10 @@ a.active .menu_badge {
 /* -- booster-div ----------------------------------------------------- */
 
 .booster {
-  text-align: center;                  /* teksti asemoidaan keskelle */
+  text-align: center;
+   
+
+               /* teksti asemoidaan keskelle */
 }
 
 /* -- Item-komponentti ----------------------------------------------- */
