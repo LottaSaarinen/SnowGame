@@ -54,7 +54,7 @@ function App() {
     };
 
     const setFruitChangeTimer = () => {
-      const randomInterval = Math.random() * (300000 - 120000) + 120000;
+      const randomInterval = Math.random() * (200000 - 100000) + 100000;
       setTimeout(() => {
         changeFruit();
         setFruitChangeTimer();
